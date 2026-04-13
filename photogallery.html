@@ -1,0 +1,93 @@
+<!doctype html>
+
+<html>
+<head><title>Photo Gallery</title></head>
+
+<header>
+WEB PHOTO GALLERY
+</header>
+<a href="photogallery.html">
+<img src="images/close.jpg"=style="height:3%" title="Click to Close">
+</a>
+</header>
+</html>
+<style>
+
+@keyframes zoom
+{
+ from{transform:scale(0);}
+ to{transform:scale(1);}
+
+}
+
+header
+{
+width:50%;
+background:black;
+color:white;
+font-size:50px;
+box-shadow:10px 10px 10px gray;
+font-family:Arial balck;
+text-align:center;
+padding:10px;
+margin:auto;
+margin-bottom:20px;
+}
+
+
+.picstyle
+{
+ width:300px;
+height:300px;
+margin:40px;
+box-shadow:10px 10px 10px gray;
+border-radius:40px; 
+
+transition:0.50s;
+
+animtion:zoom 1s;
+}
+
+.picstyle:hover
+{
+transform:scale(1.50) rotate(360deg);
+border-radius:150px;
+
+}
+
+main 
+{
+
+width:80%;
+margin:auto;
+}
+
+</style>
+
+<body>
+
+<main style=">
+
+<a href="p1.html">
+<img src="images/p1.jpg" class="picstyle">
+</a>
+
+<a href="p2.html">
+<img src="images/p2.jpg" class="picstyle">
+</a>
+
+<a href="p3.html">
+<img src="images/p3.jpg" class="picstyle">
+</a>
+
+<a href="p4.html">
+<img src="images/p10.jpg" class="picstyle">
+</a>
+
+<a href="p5.html">
+<img src="images/p5.jpg" class="picstyle">
+</a>
+</main>
+</body>
+<footer></footer>
+</html>

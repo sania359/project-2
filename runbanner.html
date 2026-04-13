@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner2</title>
+</head>
+<style>
+@keyframes runbanner
+{
+ 10%{left:0%;}
+ 20%{left:-19%;}
+ 30%{left:-19%;}
+ 40%{left:-38%;}
+ 50%{left:-38%;}
+ 60%{left:-57%;}
+ 70%{left:-57%;}
+ 80%{left:-76%;}
+90%{left:-76%;}
+}
+
+body
+{
+     overflow:hidden;
+    
+}
+#mask{
+    width:50%;
+    height:500px;
+    //background:red;
+    margin:auto;
+    overflow:hidden;
+
+}
+
+header{
+    //background:rgb(214,45,45);
+    width:550%;
+    height:600px;
+    overflow:hidden;
+}
+
+.pic
+{
+    width:19%;
+    height:100%;
+    position:relative;
+    left:0%;
+    animation:runbanner 15s linear infinite alternate;
+
+}
+</style>
+<body>
+    <div id="mask">
+
+<header>
+      
+    <img src="images/p1.jpg" class="pic">
+    <img src="images/p2.jpg" class="pic">
+    <img src="images/p3.jpg" class="pic">
+    <img src="images/p4.jpg" class="pic">
+</header>
+</div>  
+</body>
+</html>
