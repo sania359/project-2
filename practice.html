@@ -1,209 +1,139 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practice Work</title>
 
-
-<header class="header">
-
-<h1>PRACTICE WORK</h1>
-</header>
-
-<title>Practice Pages </title>
 <style>
 
-.header
-{
-background-color: #4a6656;
-color: white;
-padding: 20px 40px;
-text-align: center;
-box-shadow: 2px 5px 8px black;
+/* Body */
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    background:#f2f2f2;
+}
+
+/* Header */
+.header{
+    background:#4a6656;
+    color:white;
+    text-align:center;
+    padding:20px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.3);
 }
 
 .header h1{
-margin: 0%;
-font-size: 30px;
-letter-spacing: 1px;
+    margin:0;
+    font-size:32px;
 }
 
-
-	
-
-	
-div
-{
-border:1px black solid;
-padding:10px;
+/* Main Section */
+main{
+    width:90%;
+    margin:auto;
+    padding:30px 0;
 }
 
-#col1
-{
-height:100px;
-width:10%;
-margin:10px;
-border-radius:100px;
-}
-#col2
-{
-width:60%;
-height:200px;
-margin:10px;
+/* Title */
+#list h2{
+    text-align:center;
+    color:#333;
+    margin-bottom:30px;
 }
 
-header
-{
-border:1px black solid;
-//height:300px;
-display:flex;
-// flex-direction:column;
-flex-direction:row;
-//justify-content:end;
-//justify-content:start;
-//justify-content:center;end;
-justify-content:space-between;
-flex-wrap:wrap;
+/* List Container */
+ol{
+    padding:0;
+    margin:0;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
 }
 
-footer
-{
-//background:red;
-display:flex;
-flex-direction:column;
-text-align:center;
-margin-top:200px;
-clear:both:
+/* Box Style */
+ol li{
+    list-style:none;
+    width:30%;
+    min-width:180px;
+    background:white;
+    padding:15px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.2);
+    transition:0.3s;
 }
 
-
-footer #info,#sitemap,#socialmedia 
-  {
-           width:100%;
-           padding:10px;
-  }
-#sitemap ul li
-{
-list-style:none;
-text-align:left;
-margin-left:40%;
-}
-#socialmedia ul li
-{
-list-style:none;
-text-align:left;
-margin-left:40%;
+/* Hover */
+ol li:hover{
+    background:#4a6656;
+    transform:scale(1.05);
 }
 
-
-main
-{
-
-}
-.cardstyle
-{
-width:60%;
-height:180px;
-box-shadow:10px 10px 10px black;
+/* Link */
+ol li a{
+    text-decoration:none;
+    color:black;
+    font-size:18px;
+    font-weight:bold;
+    display:block;
 }
 
-
-/*  Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px)
- {
- body{background:#F0EDCC;}
- }
-
-nav ol li 
-{
-display:block;
+/* Hover Link */
+ol li:hover a{
+    color:white;
 }
 
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-
-@media only screen and (min-width: 600px)
- {
-body{background:#ACC7B4;}
- }
-nav ol li 
-{
-display:inline;
+/* Mobile Responsive */
+@media(max-width:768px){
+    ol li{
+        width:45%;
+    }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px)
- {
-  body{background:#DCE2F0;}
- }
+@media(max-width:500px){
+    ol li{
+        width:100%;
+    }
 
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) 
-{
-body{background:#F9EBDE;}
-}
-
-
-nav 
-{
-width:90%;
-margin:auto;
-
-text-align:center;
-margin:50px;
-}
-
-nav ol li
-{
-list-style:none;
-background:teal;
-margin-left:-2px;
-
-padding:20px;
-text-align:centre;
-cursor:pointer;
-box-shadow:10px 10px 10px black;
-transition:0.50s;
-}
-
-nav ol li:hover
-{
-background:red;
-transform:scale(1.10);
-a:link{color:yellow;text-decoration:none;}
-a:visited{color:yellow;}
-a:hover{text-decoration:underline;color:red;}
-a:active{}
-
-}
-#list
-{
-color:black;
+    .header h1{
+        font-size:24px;
+    }
 }
 
 </style>
+</head>
 
 <body>
 
+<header class="header">
+    <h1>PRACTICE WORK</h1>
+</header>
 
 <main>
 
 <div id="list">
 
-<h1>Practice Page </h1>
+<h2>Practice Pages List</h2>
+
 <ol>
+
 <li><a href="index.html">Home Page</a></li>
-<li><a href="list.html">Order List</a> </li>
-<li><a href="table.html">Table</a></li>
-<li><a href="banner.html">Banner</a> </li>
-<li><a href="runbanner.html">Runbanner</a></li>
-<li><a href="registation_form.html">Registation Form </a></li>
-<li><a href="login_form.html">Login Form</a></li>
-<li><a href="bookmark_.html">Book Mark </a></li>
-<li><a href="my profile.html">profile Page</a></li>
+<li><a href="my profile.html">Profile Page</a></li>
 <li><a href="photogallery.html">Photo Gallery</a></li>
 <li><a href="responsivefile.html">Responsive Profile</a></li>
-
+<li><a href="list.html">Order List</a></li>
+<li><a href="bookmark.html">Book Mark</a></li>
+<li><a href="table.html">Table</a></li>
+<li><a href="loginform.html">Login Form</a></li>
+<li><a href="registationform.html">Registration Form</a></li>
+<li><a href="banner.html">Banner</a></li>
+<li><a href="runbanner.html">Run Banner</a></li>
+<li><a href="iframe.html">Iframe</a></li>
+<li><a href="media.html">Media (Audio/video)</a></li>
+<li><a href="video.html">Video</a></li>
 
 </ol>
 
@@ -211,11 +141,5 @@ color:black;
 
 </main>
 
-<footer>
-
-</footer>
-
 </body>
-
-
 </html>
