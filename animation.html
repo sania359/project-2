@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<style>
+
+:root{
+    --dark:rgb(78, 87, 92);
+    --light:white;
+    --mysize:50px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:var(--dark);
+    color:var(--light);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Header Box */
+header{
+    width:90%;
+    margin:25px auto;
+    background:#070707;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+    padding:25px;
+}
+
+header h1{
+    text-align:center;
+    font-size:var(--mysize);
+    text-transform:uppercase;
+    font-family:Arial Black;
+    background:none;
+}
+
+/* Sub Heading */
+#sub{
+    display:inline-block;
+    font-size:30px;
+    padding:10px;
+    margin-left:40px;
+}
+
+#sub:hover{
+    cursor:pointer;
+    animation:pulse;
+    animation-duration:0.5s;
+}
+
+
+.text-style{
+    width:85%;
+    margin:20px auto;
+    padding:40px;
+    background:#5a6469;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+    line-height:1.8;
+    font-size:20px;
+    text-align:justify;
+    text-indent:40px;
+}
+
+footer{
+    width:90%;
+    margin:30px auto;
+    padding:20px;
+    background:#070707;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 -5px 15px rgba(0,0,0,0.3);
+    font-size:18px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1 class="animate__animated animate__fadeInRight">
+TATA PRODUCT
+</h1>
+</header>
+
+<main>
+
+<h2 id="sub">About Us</h2>
+
+<p class="text-style animate__animated animate__bounceIn">
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa quae sit sed. Nesciunt ullam ea aut beatae modi voluptates animi exercitationem cum. Eaque ipsum fugit sunt fuga, velit voluptates possimus!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis debitis numquam odio rem repellendus illo? Esse nihil, recusandae a ab, expedita ratione reiciendis hic animi molestias excepturi, ex labore in.
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium deserunt consequatur doloremque totam nam facilis voluptatum rem a dolorem perspiciatis, quos ad sed quaerat ea ut asperiores odit dolore dolor.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus praesentium provident voluptatem ea architecto neque maxime perferendis consequuntur explicabo eligendi sint expedita, ratione nesciunt, labore vero reprehenderit earum temporibus modi!
+</p>
+
+</main>
+
+<footer>
+© 2026 Tata Product
+| All Rights Reserved | 
+</footer>
+
+</body>
+</html>
