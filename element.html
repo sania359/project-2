@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create element</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:80%;
+    background:#f4f4f4;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    font-family:Arial;
+}
+
+
+header{
+    width:100%;
+    margin:25px auto;
+    background:#963232;
+    border-radius:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+    padding:25px;
+    text-align:center;
+    color:white;
+}
+
+
+footer{
+    width:100%;
+    color:white;
+    margin-top:auto;
+    padding:25px;
+    background:#963232;
+    text-align:center;
+    box-shadow:0 -5px 15px rgba(0,0,0,0.3);
+    font-size:18px;
+}
+
+@media(max-width:768px){
+
+    header{
+        width:90%;
+        border-radius:20px;
+        padding:18px;
+    }
+
+    h1{
+        font-size:24px;
+        text-align:center;
+        padding:40px;
+    }
+
+    img{
+        width:80% !important;
+    }
+
+    footer{
+        font-size:15px;
+        padding:18px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+  
+    <header>
+        <h2> Create Element By JavaScript</h2>
+    </header>
+
+   
+    <script>
+     
+     var p = document.createElement("img")
+
+     document.body.appendChild(p)
+
+      p.src="images/p1.jpg"
+
+      p.style="transition:0.50s;margin:20px;border-radius:20px;cursor:pointer;"
+
+      document.title ="No Error"
+
+      p.style.width="30%"
+
+      p.style.boxShadow="10px 10px 10px gray"
+
+      p.onclick = function()
+      {
+        p.src="images/p1.jpg"
+      }
+
+      p.onmouseout = function()
+      {
+        p.src="images/p2.jpg"
+        p.style.transform = "scale(1.10)"
+      }
+
+      p.onmouseover = function()
+      {
+        this.style.transform="scale(1.30)"
+      }
+
+    </script>
+
+   
+    <footer>
+        © 2026 | All Rights Reserved |
+    </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>javaScript</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:rgb(158,154,154);
+    color:rgb(25,25,24);
+
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+/* Header */
+header{
+    background:rgb(133,41,57);
+    color:white;
+    text-align:center;
+    padding:15px;
+    font-size:30px;
+    letter-spacing:2px;
+    border-radius:10px;
+    box-shadow:0 10px 10px gray;
+}
+
+/* Footer */
+#footer{
+    width:100%;
+    margin-top:auto;
+    color:white;
+    background:rgb(133,41,57);
+    text-align:center;
+    padding:15px;
+}
+
+/* Mobile Devices */
+@media (max-width:600px){
+
+    header{
+        font-size:20px;
+        padding:15px;
+    }
+
+    #footer{
+        font-size:14px;
+        padding:10px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>Welcome to JavaScript</header>
+
+<script>
+
+document.bgColor = "brown";
+
+document.write(`<div style="
+width:90%;
+background:white;
+color:black;
+margin:50px auto;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+border-radius:10px;
+box-shadow:0 10px 20px gray;
+text-align:center;
+padding:10px;
+">
+<p>JavaScript is a programming language that was first created in 1994 as a way to add functionality and user interaction to a website.
+     If we think back to our analogy of a web page as a house (Introduction to Web Development Fundamentals), we will remember that we 
+     said that JavaScript is the electricity, plumbing, and gas. It is what makes the web page “run”. JavaScript was originally designed 
+     to be used purely on the front end as a way for web developers to add functionality to their web pages, and in its early days,
+      it did just that. Recently, the introduction of the “V8 engine” by Google has improved the speed and functionality of JS.</p>
+
+
+</div>
+
+`);
+
+//alert("hello world")
+
+var mycolor = prompt("Set background color","pink")
+document.body.style.background = mycolor
+
+//document.title = "HELLO";
+
+var answer = confirm("Want to close...?");
+
+if(answer == true)
+{
+    window.close();
+}
+else
+{
+    alert("Window will not close since you pressed cancel");
+}
+
+</script>
+
+<div id="footer">
+      © 2026 | All Rights Reserved |
+</div>
+
+</body>
+</html>
