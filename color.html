@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change </title>
+</head>
+<header>COLOR CHANGE</header>
+<style>
+ *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif; 
+  }
+  
+body{
+    background:#eef2f5;
+    padding:20px;
+}
+header{
+font-size:32px;
+font-family:Arial Black;
+background:#000000;
+color:white;
+text-align:center;
+padding:20px;
+box-shadow:2px 5px 8px black;
+margin-bottom:40px;
+border-radius:15px;
+}
+footer{
+background:#000000;
+color:white;
+text-align:center;
+padding:50px;
+font-size:15px;
+margin-top:400px;
+border-radius:15px;
+}
+
+
+</style>
+    
+   <script>
+     var b = document.createElement("button")
+     b.innerHTML="Create Random Color Of Background"
+     b.style.display = "block"
+     b.style.margin = "0 auto"
+     document.body.appendChild(b)
+     function randomcolor()
+     {
+        document.title ="Working"
+        var red = Math.round(Math.random()*255)
+        var green = Math.round(Math.random()*255)
+        var blue = Math.round(Math.random()*255)
+        var c= "rgb("+red+","+green+","+blue+")"
+        //alert(c)
+        document.body.style.background = c 
+     }
+
+    b.onclick = randomcolor
+
+
+   </script> 
+ 
+<footer>
+<p>| All Rights Reserved |</p>
+</footer>
+ 
+</body>
+</html>
