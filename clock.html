@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<header>WORKING WITH DATE CLASS IN JS</header>
+<style>
+ *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif; 
+  }
+body{
+    background:#eef2f5;
+    padding:20px;
+}
+header{
+font-size:32px;
+font-family:Arial Black;
+background:#000000;
+color:white;
+text-align:center;
+padding:20px;
+box-shadow:2px 5px 8px black;
+margin-bottom:40px;
+border-radius:15px;
+}
+footer{
+background:#000000;
+color:white;
+text-align:center;
+padding:50px;
+font-size:15px;
+margin-top:400px;
+border-radius:15px;
+}
+
+#clock
+{
+   color:white;
+   font-size:30px;
+   font-family:Arial black;
+   background:rgb(128, 123, 205);
+   width:250px;
+   padding:10px;
+   text-align:center;
+   box-shadow:10px  10px 10px gray;
+   border-radius:50px;
+  
+}
+
+</style>
+<body>
+    <div id="clock">Time</div><br>
+    <button onclick="st()">Start</button>
+    <button onclick="sto()">Stopt</button>
+
+<script>
+    function show()
+    {
+        var d = new Date()
+        var t = document.getElementById("clock")
+        t.innerHTML = d.toLocaleTimeString()
+    }
+    var timer
+        function st()
+        {
+            timer = setInterval("show()",1000)
+    
+        }
+        function sto()
+        {
+            clearInterval(timer)
+        }
+</script>
+    <footer>
+<p>| All Rights Reserved |</p>
+</footer>
+ 
+</body>
+</html>
