@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Loop Gallery</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+header{
+    width:100%;
+    background:black;
+    color:white;
+    padding:20px;
+    text-align:center;
+    font-size:32px;
+    font-weight:bold;
+    
+}
+
+
+.box{
+    width:90%;
+    margin:40px auto;
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    box-shadow:0px 0px 15px gray;
+}
+
+
+.pic{
+    width:30%;
+    border-radius:10px;
+    box-shadow:10px 10px 10px gray;
+    transition:0.5s;
+    cursor:pointer;
+}
+
+
+footer{
+    width:100%;
+    background:black;
+    color:white;
+    text-align:center;
+    padding:18px;
+    margin-top:40px;
+    font-size:18px;
+}
+
+
+@media(max-width:768px)
+{
+    .pic{
+        width:45%;
+    }
+
+    header{
+        font-size:24px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    LOOP IMAGE GALLERY
+</header>
+
+<!-- IMAGE BOX -->
+<div class="box" id="gallery"></div>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 Loop Gallery Website
+</footer>
+
+<script>
+
+// CREATE IMAGES USING LOOP
+
+function preload()
+{
+    document.title = "No Error"
+
+    var gallery = document.getElementById("gallery")
+
+    for(var i=1; i<=5; i++)
+    {
+        var p = new Image()
+
+        gallery.appendChild(p)
+
+        p.className = "pic"
+
+        p.src = "images/j" + i + ".jpg"
+
+        p.onmouseover = function()
+        {
+            this.style.transform = "scale(1.05)"
+        }
+
+        p.onmouseout = function()
+        {
+            this.style.transform = "scale(1)"
+        }
+    }
+}
+
+window.onload = preload
+
+</script>
+
+</body>
+</html>
