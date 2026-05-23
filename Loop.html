@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Table App</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
     font-family:Arial, Helvetica, sans-serif;
 }
-body
-{
-    height:auto;
+
+body{
+    height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -23,8 +24,7 @@ body
     padding:20px;
 }
 
-.app
-{
+.app{
     width:100%;
     max-width:350px;
     background:#fff;
@@ -33,22 +33,25 @@ body
     text-align:center;
     box-shadow:0 10px 30px rgba(0,0,0,0.3);
 }
+
 .app h1{
     color:#243b55;
     margin-bottom:20px;
     font-size:28px;
 }
-.box
-{
+
+.box{
     background:#f4f7fb;
     border-radius:15px;
     padding:15px;
 }
+
 .box h2{
     margin-bottom:15px;
     color:#111;
 }
-.size{
+
+.line{
     background:#243b55;
     color:#fff;
     padding:12px;
@@ -57,27 +60,40 @@ body
     font-size:18px;
 }
 
+.end{
+    margin-top:15px;
+    color:#666;
+    font-size:14px;
+}
+
 @media(max-width:400px){
 
     .app{
         padding:18px;
     }
 
-    .size{
+    .line{
         font-size:16px;
         padding:10px;
     }
 }
+
 </style>
+</head>
+
 <body>
- <div class="app">
-   <h1>📱 TABLE APP</h1>
-   <div class="box" id="result"></div>
+
+<div class="app">
+
+    <h1>📱 TABLE APP  </h1>
+
+    <div class="box" id="result"></div>
+
 </div>
 
 <script>
 
-//var n = prompt("Enter a Number","2");
+var n = prompt("Enter a Number","2");
 
 var result = document.getElementById("result");
 
@@ -89,6 +105,10 @@ for(var i = 1; i <= 10; i++)
     "<div class='line'>" +
     n + " * " + i + " = " + (n*i) +"</div>";
 }
+
+
+
 </script>
+
 </body>
 </html>
