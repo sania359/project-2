@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+body
+{
+    height:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#141e30,#243b55);
+    padding:20px;
+}
+
+.app
+{
+    width:100%;
+    max-width:350px;
+    background:#fff;
+    border-radius:25px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+.app h1{
+    color:#243b55;
+    margin-bottom:20px;
+    font-size:28px;
+}
+.box
+{
+    background:#f4f7fb;
+    border-radius:15px;
+    padding:15px;
+}
+.box h2{
+    margin-bottom:15px;
+    color:#111;
+}
+.size{
+    background:#243b55;
+    color:#fff;
+    padding:12px;
+    margin:10px 0;
+    border-radius:12px;
+    font-size:18px;
+}
+
+@media(max-width:400px){
+
+    .app{
+        padding:18px;
+    }
+
+    .size{
+        font-size:16px;
+        padding:10px;
+    }
+}
+</style>
+<body>
+ <div class="app">
+   <h1>📱 TABLE APP</h1>
+   <div class="box" id="result"></div>
+</div>
+
+<script>
+
+//var n = prompt("Enter a Number","2");
+
+var result = document.getElementById("result");
+
+result.innerHTML += "<h2>Table of " + n + "</h2>";
+
+for(var i = 1; i <= 10; i++)
+{
+    result.innerHTML += 
+    "<div class='line'>" +
+    n + " * " + i + " = " + (n*i) +"</div>";
+}
+</script>
+</body>
+</html>
