@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>javaScript</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#FFB2B2;
+    color:#FFFBF1;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+
+header{
+    background:#E36A6A;
+    color:#FFF2D0;
+    text-align:center;
+    padding:15px;
+    font-size:30px;
+    letter-spacing:2px;
+    border-radius:10px;
+    box-shadow:5px 2px 50px #FFF2D0;
+}
+.button{
+    width:100px;
+    display:inline-block;
+    color:#FFF2D0;
+    background:#E36A6A;
+    padding:10px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    margin-top:10px;
+    box-shadow:5px 2px 50px #FFF2D0;
+    transition:0.5s;
+}
+
+.button:hover
+{
+    transform:scale(1.05);
+}
+
+#footer{
+    width:100%;
+    margin-top:auto;
+    color:#FFF2D0;
+    background:#E36A6A;
+    box-shadow:0 10px 20px #E36A6A;
+    text-align:center;
+    padding:15px;
+}
+
+
+@media (max-width:600px){
+
+    header{
+        font-size:20px;
+        padding:15px;
+    }
+
+    #footer{
+        font-size:14px;
+        padding:10px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>Welcome to JavaScript</header>
+
+<script>
+
+var mycolor = prompt("Set background color","pink");
+
+document.body.style.background = mycolor;
+
+document.write(`
+
+<div style="
+width:90%;
+max-width:900px;
+min-height:400px;
+background:white;
+color:black;
+margin:50px auto;
+padding:30px;
+border-radius:10px;
+box-shadow:0 10px 20px gray;
+line-height:1.8;
+font-size:18px;
+text-align:justify;
+">
+
+<h1 style="
+text-align:center;
+margin-bottom:20px;
+color:#E36A6A;
+">
+Introduction
+</h1>
+
+<p>
+JavaScript is a programming language that was first created in 1994 as a way to add functionality and user interaction to a website.
+If we think back to our analogy of a web page as a house, we will remember that we said that JavaScript is the electricity,
+plumbing, and gas. It is what makes the web page run.
+</p>
+
+</div>
+
+`);
+
+</script>
+
+<div style="text-align:center; margin-bottom:30px;">
+    <a href="java practice.html" class="button">
+        Back
+    </a>
+</div>
+
+<div id="footer">
+      © 2026 | All Rights Reserved |
+</div>
+
+</body>
+</html>
