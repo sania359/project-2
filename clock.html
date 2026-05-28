@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clock</title>
 </head>
-<header>WORKING WITH DATE CLASS IN JS</header>
+
 <style>
  *{
     margin:0;
@@ -13,51 +13,136 @@
     box-sizing:border-box;
     font-family:Arial, Helvetica, sans-serif; 
   }
+
 body{
     background:#eef2f5;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
     padding:20px;
 }
+
 header{
-font-size:32px;
-font-family:Arial Black;
-background:#000000;
-color:white;
-text-align:center;
-padding:20px;
-box-shadow:2px 5px 8px black;
-margin-bottom:40px;
-border-radius:15px;
-}
-footer{
-background:#000000;
-color:white;
-text-align:center;
-padding:50px;
-font-size:15px;
-margin-top:400px;
-border-radius:15px;
+    background:#8A5F41;
+    color:#F3E4C9;
+    text-align:center;
+    padding:22px;
+    font-size:32px;
+    font-family:Arial Black;
+    border-radius:18px;
+    box-shadow:0 8px 15px #F3E4C9;
+    letter-spacing:1px;
 }
 
-#clock
-{
-   color:white;
-   font-size:30px;
-   font-family:Arial black;
-   background:rgb(128, 123, 205);
-   width:250px;
-   padding:10px;
-   text-align:center;
-   box-shadow:10px  10px 10px gray;
-   border-radius:50px;
-  
+
+
+.container{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
 }
+
+#clock{
+    width:320px;
+    padding:30px;
+    text-align:center;
+    font-size:42px;
+    font-family:Arial Black;
+    color:#F3E4C9;
+    background:#A77F60;
+    border-radius:25px;
+    box-shadow:0 8px 15px #A77F60;
+    margin-bottom:30px;
+    letter-spacing:2px;
+}
+
+.btn-box{
+    display:flex;
+    gap:20px;
+}
+
+button{
+    padding:14px 28px;
+    border:none;
+    border-radius:40px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.start{
+    background:#16a34a;
+    color:white;
+    box-shadow:0 8px 15px rgba(0,0,0,0.2);
+}
+
+.start:hover{
+    background:#166534;
+    transform:scale(1.05);
+}
+
+.stop{
+    background:#dc2626;
+    color:white;
+    box-shadow:0 8px 15px rgba(0,0,0,0.2);
+}
+
+.stop:hover{
+    background:#7f1d1d;
+    transform:scale(1.05);
+}
+
+.back-btn{
+    width:140px;
+    padding:12px;
+    border:none;
+    border-radius:40px;
+    background:#CCD67F;
+    color:#A77F60;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.4s;
+    box-shadow:0 8px 15px #F3E4C9;
+    margin:80px auto 0;
+    display:block;
+}
+
+.back-btn:hover{
+    transform:translateY(-3px);
+}
+
+footer
+{
+    background:#8A5F41;
+    color:#F3E4C9;
+    text-align:center;
+    padding:20px;
+    border-radius:15px;
+    margin-top:30px;
+    font-size:15px;
+    box-shadow:0 8px 15px #F3E4C9;
+}
+
 
 </style>
 <body>
-    <div id="clock">Time</div><br>
-    <button onclick="st()">Start</button>
-    <button onclick="sto()">Stopt</button>
 
+<header>WORKING WITH DATE CLASS IN JS</header>   
+   
+   <button class="back-btn" onclick="history.back()">
+    Back
+   </button>
+   <div class="container">
+    <div id="clock">Time</div>
+    <div class="btn-box">
+    <button class="start" onclick="st()">Start</button>
+    <button class="stop" onclick="sto()">Stopt</button>
+    </div>
+    </div>
 <script>
     function show()
     {

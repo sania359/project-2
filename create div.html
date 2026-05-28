@@ -19,12 +19,13 @@ html{
 }
 
 body{
-background-color:#ffffff;
-color:#333;
+    background:#FFF0E4;
+   color:#333;
 }
+
 header{
-    background:#070707d4;
-    color:white;
+    background:#007979;
+    color:#FFE0C5;
     margin-bottom: 30px;
     text-align:center;
     padding:20px;
@@ -35,26 +36,49 @@ header{
 }
 
 
-.box
-{
+.box{
     border-radius:10px;
     transition:0.50s;
     width:300px;
     border:2px black solid;
-    position:absolute;
-    top:100px;
-    left:100px;
     text-align:center;
+    background:#24B1B1;
+    box-shadow:0px 0px 10px #007979;
+    margin:40px auto;
+    padding-bottom:20px;
+}
 
+.buttons{
+    position:fixed;
+    bottom:60px;
+    width:100%;
+    display:flex;
+    justify-content:center;
 }
-.mystyle
+
+.button{
+    background:#007979;
+    color:#FFE0C5;
+    padding:12px 30px;
+    border-radius:8px;
+    cursor:pointer;
+    text-decoration:none;
+    box-shadow:0px 0px 10px #007979;
+    display:inline-block;
+    display:flex;
+    justify-content:center;
+    transition:0.5s;
+}
+
+.button:hover
 {
-    background:rgb(217, 212, 212);
+    transform:scale(1.05);
 }
+
 footer{
     width:100%;
-    color:white;
-    background:#070707d4;
+    color:#FFE0C5;
+    background:#007979;
     text-align:center;
     padding:10px;
     position:fixed;
@@ -78,6 +102,11 @@ footer{
 
 
 <body>
+    <div class="buttons">
+    
+  <a href="java practice.html" class="button">Back</a>
+</div>
+
  <script>
     document.title="Create Element"
 
@@ -85,8 +114,8 @@ footer{
             document.body.appendChild(d);
             d.className="box mystyle"
 
-            d.innerHTML="<button style='margin-top:10px;margin-left:210px;'onclick='closedilog()'>X</button>"
-            d.innerHTML+="<h2>GIF</h2>"
+            d.innerHTML="<button style='margin-top:10px;margin-left:240px;' onclick='closedilog()'>X</button>"
+            d.innerHTML+="<h2 style='color:#FFE0C5;''>GIF</h2>"
             d.innerHTML+="<hr color='black' size='3'</hr>"
             d.innerHTML+="<img src='images/g1.gif' style='width:300px;height:auto; margin:10px auto;display:block;'>"
 
@@ -97,7 +126,7 @@ footer{
             }
  </script>
 
-<footer>All Rights Reserved</footer>
+<footer> © 2026 All Rights Reserved</footer>
     
 </body>
 
