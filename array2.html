@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Images Collection</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#fbffca;
+}
+
+
+
+header{
+    font-size:30px;
+    text-transform:uppercase;
+    font-family:Arial Black;
+    background:teal;
+    color:white;
+    text-align:center;
+    padding:20px;
+    box-shadow:5px 5px 5px rgb(136, 207, 162);
+    width:50%;
+    margin:20px auto 50px;
+    border-radius:10px;
+}
+
+
+
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+    padding:20px;
+}
+
+.mystyle{
+    width:300px;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    transition:0.4s;
+}
+
+.mystyle:hover{
+    transform:scale(1.05);
+}
+
+
+
+.back-btn{
+    display:block;
+    width:150px;
+    margin:40px auto 20px;
+    padding:12px 25px;
+    background:teal;
+    color:white;
+    text-decoration:none;
+    text-align:center;
+    border-radius:6px;
+    font-size:16px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.back-btn:hover{
+    background:#006666;
+    transform:translateY(-2px);
+}
+
+
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:20px;
+}
+
+@media(max-width:768px){
+
+    header{
+        width:90%;
+        font-size:22px;
+    }
+
+    .mystyle{
+        width:90%;
+        height:220px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<header>Images Collection</header>
+
+<div class="gallery" id="gallery"></div>
+
+
+<a href="java.html" class="back-btn">Back</a>
+
+<footer>
+    <p>© 2026 All Rights Reserved</p>
+</footer>
+
+<script>
+
+var pic = [
+
+"https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600",
+"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600",
+"https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600",
+"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600",
+"https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=600",
+"https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=600",
+"https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600",
+"https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=600",
+"https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600",
+"https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600",
+"https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600",
+"https://images.unsplash.com/photo-1500534623283-312aade485b7?w=600"
+
+];
+
+var gallery = document.getElementById("gallery");
+
+for(var i = 0; i < pic.length; i++)
+{
+    gallery.innerHTML +=
+    "<img class='mystyle' src='" + pic[i] + "' alt='Image'>";
+}
+
+</script>
+
+</body>
+</html>
