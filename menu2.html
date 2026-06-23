@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dropdown Menu</title>
+
+
+<style>
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+body{
+
+    min-height:100vh;
+    background:#bbb0b0;
+    display:flex;
+    flex-direction:column;
+
+}
+
+
+/* HEADER */
+
+header{
+
+    background:#853953;
+    color:#F3F4F4;
+    padding:25px;
+    text-align:center;
+
+}
+
+
+header h1{
+
+    font-size:32px;
+
+}
+
+
+
+
+/* NAV */
+
+
+#nav{
+
+    display:flex;
+    justify-content:center;
+    gap:60px;
+    margin-top:50px;
+
+}
+
+
+.menu_box{
+
+    position:relative;
+
+}
+
+
+
+
+
+button{
+
+    width:160px;
+    padding:14px;
+
+    background:#333;
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+}
+
+
+
+button:hover{
+
+    background:black;
+
+}
+
+
+
+
+
+/* DROPDOWN */
+
+
+ol{
+
+    position:absolute;
+
+    top:55px;
+
+    left:0;
+
+    width:160px;
+
+    background:#444;
+
+    color:white;
+
+    border-radius:8px;
+
+    overflow:hidden;
+
+}
+
+
+
+li{
+
+    list-style:none;
+
+    padding:13px;
+
+}
+
+
+
+li:hover{
+
+    background:white;
+
+}
+
+
+
+
+
+li a{
+
+    text-decoration:none;
+    color:white;
+    display:block;
+
+}
+
+
+li:hover a{
+
+    color:black;
+
+}
+
+
+
+
+.toggle{
+
+    display:none;
+
+}
+
+
+
+
+
+/* FOOTER */
+
+
+footer{
+
+    margin-top:auto;
+
+    background:#853953;
+
+    color:#F3F4F4;
+
+    text-align:center;
+
+    padding:18px;
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+
+<header>
+
+<h1>Dropdown Menu Design</h1>
+
+</header>
+
+
+
+
+
+
+
+<div id="nav">
+
+
+
+<div class="menu_box">
+
+
+<button onclick="show_hide_menu(event)" id="menu1">
+
+Main
+
+</button>
+
+
+<ol id="m" class="toggle">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">Practice</a></li>
+</ol>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="menu_box">
+
+
+<button onclick="show_hide_menu(event)" id="menu2">
+
+Practice
+
+</button>
+
+
+
+
+
+<ol id="m2" class="toggle">
+
+
+<li><a href="index.html">HTML</a></li>
+<li><a href="java practice.html">JavaScript</a></li>
+<li><a href="https://www.behance.net/saniadhamniya">Behance</a></li>
+
+</ol>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="menu_box">
+
+
+<button onclick="show_hide_menu(event)" id="menu3">
+
+Social Media
+
+</button>
+
+
+
+
+
+<ol id="m3" class="toggle">
+
+<li>
+<a href="https://youtube.com" target="_blank">
+YouTube
+</a>
+</li>
+
+
+<li>
+<a href="https://instagram.com" target="_blank">
+Instagram
+</a>
+</li>
+
+
+<li>
+<a href="https://pinterest.com" target="_blank">
+Pinterest
+</a>
+</li>
+
+
+</ol>
+
+
+</div>
+
+
+
+</div>
+<script>
+
+
+let m1 = document.getElementById("m");
+let m2 = document.getElementById("m2");
+let m3 = document.getElementById("m3");
+
+
+function show_hide_menu(event)
+{
+let menu = event.target.id;
+
+m1.classList.add("toggle");
+
+m2.classList.add("toggle");
+
+m3.classList.add("toggle");
+
+
+
+
+
+if(menu=="menu1")
+
+{
+
+m1.classList.remove("toggle");
+
+}
+else if(menu=="menu2")
+{
+m2.classList.remove("toggle");
+}else if(menu=="menu3")
+
+{
+m3.classList.remove("toggle");
+}
+
+
+
+}
+
+
+
+
+
+
+
+window.onclick=function(event)
+
+{
+
+
+if(!event.target.matches("button"))
+
+{
+
+
+m1.classList.add("toggle");
+
+m2.classList.add("toggle");
+
+m3.classList.add("toggle");
+
+
+}
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
