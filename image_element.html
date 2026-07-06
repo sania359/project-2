@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Element</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    min-height:100vh;
+    background:#f4f4f4;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    width:100%;
+    background:#541A1A;
+    color:#F1E2D1;
+    text-align:center;
+    padding:25px;
+    font-size:28px;
+    font-weight:bold;
+    position:relative;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* BACK BUTTON */
+.back-btn{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    background:#F1E2D1;
+    color:#541A1A;
+    padding:10px 16px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.back-btn:hover{
+    transform:translateY(-50%) scale(1.05);
+}
+
+/* ================= IMAGE BOX ================= */
+
+#imgBox{
+    display:flex;
+    justify-content:center;
+    margin:40px 0;
+}
+
+/* ================= BUTTON ================= */
+
+.button{
+    background:#541A1A;
+    color:#F1E2D1;
+    padding:12px 30px;
+    border-radius:8px;
+    cursor:pointer;
+    text-decoration:none;
+    box-shadow:0px 0px 10px gray;
+    transition:0.5s;
+    display:inline-block;
+    margin:20px auto;
+}
+
+.button:hover{
+    transform:scale(1.05);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    width:100%;
+    margin-top:auto;
+    padding:20px;
+    background:#541A1A;
+    color:#F1E2D1;
+    text-align:center;
+    font-size:16px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+header{
+    font-size:20px;
+    padding:18px;
+}
+
+.back-btn{
+    left:10px;
+    padding:8px 12px;
+    font-size:14px;
+}
+
+#imgBox img{
+    width:80% !important;
+}
+
+footer{
+    font-size:14px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <a href="javapractice.html" class="back-btn">←</a>
+    Create Image Element By JavaScript
+</header>
+
+<div id="imgBox"></div>
+
+
+<script>
+
+var p = document.createElement("img");
+
+document.getElementById("imgBox").appendChild(p);
+
+p.src = "images/f2.jpg";
+
+p.style.transition = "0.5s";
+p.style.margin = "20px";
+p.style.borderRadius = "20px";
+p.style.cursor = "pointer";
+p.style.width = "30%";
+p.style.boxShadow = "10px 10px 10px gray";
+
+document.title = "No Error";
+
+p.onclick = function(){
+    p.src = "images/f2.jpg";
+}
+
+p.onmouseout = function(){
+    p.src = "images/f3.jpg";
+    p.style.transform = "scale(1.1)";
+}
+
+p.onmouseover = function(){
+    this.style.transform = "scale(1.3)";
+}
+
+</script>
+
+<footer>
+    © 2026 | All Rights Reserved |
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sania Portfolio - JavaScript</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#F1E2D1;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+/* Header */
+
+header{
+    background:#DCC3AA;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    color:#810B38;
+}
+
+nav{
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#541A1A;
+    font-size:18px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#810B38;
+}
+
+/* Tabs */
+
+.tech-tabs{
+    width:600px;
+    max-width:90%;
+    margin:40px auto;
+    background:#DCC3AA;
+    padding:10px;
+    border-radius:50px;
+    display:flex;
+}
+
+.tech-tabs a{
+    flex:1;
+    text-align:center;
+    padding:15px;
+    text-decoration:none;
+    color:#541A1A;
+    font-weight:bold;
+    border-radius:50px;
+    transition:.3s;
+}
+
+.tech-tabs .active{
+    background:#541A1A;
+    color:white;
+}
+
+/* Cards */
+
+.container{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.card{
+    background:#DCC3AA;
+    border-radius:25px;
+    padding:30px;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    overflow:hidden;
+    transition:.35s;
+    box-shadow:0 10px 20px rgba(0,0,0,.12);
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:8px;
+    background:linear-gradient(90deg,#810B38,#541A1A);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+}
+
+.card h3{
+    margin-top:10px;
+    margin-bottom:15px;
+    color:#810B38;
+    font-size:24px;
+}
+
+.card p{
+    color:#4a3b32;
+    line-height:1.7;
+    margin-bottom:30px;
+    flex-grow:1;
+}
+
+.project-btn{
+    margin-top:auto;
+    text-align:center;
+    padding:14px;
+    text-decoration:none;
+    background:#541A1A;
+    color:white;
+    border-radius:12px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.project-btn:hover{
+    background:#810B38;
+}
+
+/* Back Button */
+
+.back-home{
+    text-align:center;
+    margin:50px 0;
+}
+
+.back-home a{
+    background:#541A1A;
+    color:white;
+    padding:14px 40px;
+    border-radius:30px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.back-home a:hover{
+    background:#810B38;
+}
+
+/* Footer */
+
+footer{
+    margin-top:auto;
+    background:#DCC3AA;
+    color:#810B38;
+    text-align:center;
+    padding:25px;
+}
+
+/* Responsive */
+
+@media(max-width:1000px){
+
+.container{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:700px){
+
+header{
+    flex-direction:column;
+    gap:20px;
+}
+
+nav{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.container{
+    grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+SANIA
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="#">About</a>
+<a href="javapractice.html">Practice Work</a>
+<a href="#">Contact</a>
+</nav>
+
+</header>
+
+<div class="tech-tabs">
+
+<a href="../html/htmlpractice.html">
+HTML / CSS
+</a>
+
+<a href="javapractice.html" class="active">
+JAVASCRIPT
+</a>
+
+</div>
+
+<div class="container">
+
+<div class="card">
+<h3>JavaScript Introduction</h3>
+<p>Basic introduction of JavaScript.</p>
+<a href="javascript intro.html" class="project-btn">View Project</a>
+</div>
+
+<div class="card">
+<h3>Create Image Element</h3>
+<p>Create image using JavaScript DOM.</p>
+<a href="image_element.html" class="project-btn">View Project</a>
+</div>
+
+<div class="card">
+<h3>Create Div Element</h3>
+<p>Create and manipulate div using JavaScript.</p>
+<a href="create div.html" class="project-btn">View Project</a>
+</div>
+
+<div class="card">
+<h3>Background Effects</h3>
+<p>Dynamic background color effects.</p>
+<a href="Background Effect.html" class="project-btn">View Project</a>
+</div>
+
+<div class="card">
+<h3>Dynamic Colors</h3>
+<p>Generate RGB colors using JavaScript.</p>
+<a href="Dynamic Colors.html" class="project-btn">View Project</a>
+</div>
+
+<div class="card">
+<h3>Calculator</h3>
+<p>JavaScript calculator project.</p>
+<a href="calculator.html" class="project-btn">View Project</a>
+</div>
+
+<div class="card">
+<h3>Clock</h3>
+<p>Real time digital clock.</p>
+<a href="clock.html" class="project-btn">View Project</a>
+</div>
+
+<div class="card">
+<h3>Table Design</h3>
+<p>Create table using JavaScript.</p>
+<a href="table_design.html" class="project-btn">View Project</a>
+</div>
+
+<div class="card">
+<h3>Image Gallery</h3>
+<p>Loop image gallery project.</p>
+<a href="gallery.html" class="project-btn">View Project</a>
+</div>
+
+<div class="card">
+<h3>While Loop</h3>
+<p>Background color using loop.</p>
+<a href="whileloop.html" class="project-btn">View Project</a>
+</div>
+
+<div class="card">
+<h3>POP-UP By Div</h3>
+<p>Create popup using DOM.</p>
+<a href="popup.html" class="project-btn">View Project</a>
+</div>
+
+<div class="card">
+<h3>Dark Light Mode</h3>
+<p>Toggle website theme using JavaScript.</p>
+<a href="dark_light_mode.html" class="project-btn">View Project</a>
+</div>
+
+<div class="card">
+<h3>Download PDF</h3>
+<p>Download PDF file project.</p>
+<a href="download_pdf.html" class="project-btn">View Project</a>
+</div>
+
+<div class="card">
+<h3>Dropdown Menu</h3>
+<p>Responsive dropdown navigation.</p>
+<a href="menu2.html" class="project-btn">View Project</a>
+</div>
+
+<div class="card">
+<h3>Drawing Canvas</h3>
+<p>JavaScript canvas drawing project with mouse and keyboard controls.</p>
+<a href="draw.html" class="project-btn">View Project</a>
+</div>
+
+</div>
+
+<div class="back-home">
+<a href="index.html">Back</a>
+</div>
+
+<footer>
+© 2026 All Rights Reserved
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slider & Color Picker</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#F1E2D1;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    width:100%;
+    background:#541A1A;
+    color:#F1E2D1;
+    text-align:center;
+    padding:20px;
+    font-size:32px;
+    font-weight:bold;
+    letter-spacing:2px;
+    box-shadow:0 3px 10px rgba(0,0,0,.4);
+    position:relative;
+}
+
+/* BACK BUTTON */
+.back-btn{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    background:#F1E2D1;
+    color:#541A1A;
+    text-decoration:none;
+    padding:8px 14px;
+    border-radius:8px;
+    font-size:14px;
+    font-weight:bold;
+    transition:0.3s;
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+.back-btn:hover{
+    transform:translateY(-50%) scale(1.05);
+}
+
+/* ================= MAIN ================= */
+
+.container{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+/* ================= SLIDER ================= */
+
+#mask{
+    width:370px;
+    height:260px;
+    background:white;
+    border-radius:15px;
+    border:3px solid #333;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+    overflow:hidden;
+}
+
+#box{
+    width:1700px;
+    display:flex;
+    transition:.5s;
+}
+
+.pic{
+    width:330px;
+    height:230px;
+    margin:12px;
+    border-radius:15px;
+    object-fit:cover;
+    cursor:pointer;
+    transition:.5s;
+}
+
+.pic:hover{
+    transform:scale(1.05);
+}
+
+#slider{
+    width:370px;
+    margin-top:20px;
+    cursor:pointer;
+}
+
+/* ================= COLOR PICKER ================= */
+
+.color-picker{
+    margin-top:20px;
+    width:70px;
+    height:45px;
+    border:none;
+    cursor:pointer;
+    border-radius:10px;
+}
+
+/* ================= BACK BUTTON OLD STYLE ================= */
+
+.back-button{
+    display:block;
+    width:140px;
+    margin-top:20px;
+    text-align:center;
+    text-decoration:none;
+    background:#541A1A;
+    color:#F1E2D1;
+    padding:12px;
+    border-radius:30px;
+    font-weight:bold;
+    font-size:18px;
+    box-shadow:1px 5px 10px #6b6b69;
+    transition:.3s;
+}
+
+.back-button:hover{
+    transform:translateY(-4px);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    width:100%;
+    background:#541A1A;
+    color:#F1E2D1;
+    text-align:center;
+    padding:15px;
+    font-size:18px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:600px){
+
+    header{
+        font-size:20px;
+        padding:15px;
+    }
+
+    #mask{
+        width:95%;
+        height:220px;
+    }
+
+    .pic{
+        width:calc(95vw - 35px);
+        height:190px;
+    }
+
+    #slider{
+        width:95%;
+    }
+
+    .back-btn{
+        font-size:12px;
+        padding:6px 10px;
+    }
+
+    footer{
+        font-size:14px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <a href="javapractice.html" class="back-btn">←</a>
+
+    Image Slider & Color Picker
+
+</header>
+
+<div class="container">
+
+    <div id="mask">
+        <div id="box">
+            <img src="images/j1.jpg" class="pic">
+            <img src="images/j2.jpg" class="pic">
+            <img src="images/j3.jpg" class="pic">
+            <img src="images/j4.jpg" class="pic">
+            <img src="images/j5.jpg" class="pic">
+        </div>
+    </div>
+
+    <input type="range" min="0" max="1350" value="0"
+           id="slider" oninput="move()">
+
+    <input type="color" class="color-picker"
+           oninput="document.body.style.background=this.value">
+
+   
+
+</div>
+
+<script>
+
+function move()
+{
+    var slider = document.getElementById("slider");
+    var box = document.getElementById("box");
+
+    box.style.marginLeft = "-" + slider.value + "px";
+}
+
+</script>
+
+<footer>
+    © 2026 All Rights Reserved
+</footer>
+
+</body>
+</html>
