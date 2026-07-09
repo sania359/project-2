@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sania Portfolio</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8f9fa;
+}
+
+/* HEADER */
+
+header{
+    background:white;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#076969;
+}
+
+/* MOBILE MENU */
+
+#menu-toggle{
+    display:none;
+}
+
+.hamburger{
+    display:none;
+    font-size:32px;
+    cursor:pointer;
+    color:#076969;
+}
+
+nav{
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#076969;
+}
+
+/* HERO SECTION */
+
+.hero{
+    min-height:85vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:60px 8%;
+    background:linear-gradient(135deg,#e8f8f8,#f3f5f7);
+}
+
+.hero-text{
+    max-width:600px;
+}
+
+.hero-text h5{
+    color:#076969;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+.hero-text h1{
+    font-size:55px;
+    margin-bottom:10px;
+    color:#222;
+}
+
+.hero-text h1 span{
+    color:#076969;
+}
+
+.hero-text h2{
+    font-size:28px;
+    color:#555;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#076969;
+    color:white;
+    padding:14px 30px;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(7,105,105,.25);
+}
+
+/* PROFILE IMAGE */
+
+.hero-img{
+    background:rgba(255,255,255,.5);
+    backdrop-filter:blur(10px);
+    padding:20px;
+    border-radius:30px;
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+}
+
+.hero-img img{
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    object-fit:cover;
+    border:8px solid white;
+}
+
+/* FOOTER */
+
+footer{
+    background:#1f2326;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
+
+footer h3{
+    margin-bottom:15px;
+    color:#00b4b4;
+}
+
+footer a{
+    color:#ddd;
+    text-decoration:none;
+    display:block;
+    margin:8px 0;
+    transition:.3s;
+}
+
+footer a:hover{
+    color:#00d1d1;
+}
+
+.contact{
+    margin-top:25px;
+    line-height:2;
+}
+
+.footer-bottom{
+    margin-top:25px;
+    border-top:1px solid rgba(255,255,255,.15);
+    padding-top:20px;
+    color:#bbb;
+}
+
+/* TABLET */
+
+@media(max-width:900px){
+
+    .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+        gap:40px;
+    }
+
+    .hero-text h1{
+        font-size:40px;
+    }
+
+    .hero-img img{
+        width:260px;
+        height:260px;
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    header{
+        padding:20px;
+    }
+
+    .logo{
+        font-size:28px;
+    }
+
+    .hamburger{
+        display:block;
+    }
+
+    nav{
+        display:none;
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:white;
+        flex-direction:column;
+        text-align:center;
+        padding:20px 0;
+        box-shadow:0 5px 15px rgba(0,0,0,.1);
+    }
+
+    nav a{
+        padding:12px;
+    }
+
+    #menu-toggle:checked ~ nav{
+        display:flex;
+    }
+
+    .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+        padding:50px 20px;
+    }
+
+    .hero-text h1{
+        font-size:34px;
+    }
+
+    .hero-text h2{
+        font-size:22px;
+    }
+
+    .hero-img img{
+        width:220px;
+        height:220px;
+        margin-bottom:20px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+
+    <div class="logo">SANIA</div>
+
+    <input type="checkbox" id="menu-toggle">
+
+    <label for="menu-toggle" class="hamburger">
+        ☰
+    </label>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="htmlpractice.html">Practice Work</a>
+        <a href="../Project/index1.html">Project</a> 
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h5>WELCOME TO MY PORTFOLIO</h5>
+
+        <h1>I'm <span>Sania</span></h1>
+
+        <h2>UI/UX Designer & Web Design Learner</h2>
+
+        <p>
+            I am passionate about UI/UX Design, Graphic Design and Web Design.
+            I enjoy creating clean, modern and user-friendly interfaces.
+            Currently, I am improving my creativity, design thinking and
+            problem-solving skills through practical projects.
+        </p>
+
+        <a href="htmlpractice.html" class="btn">
+            View My Work
+        </a>
+
+    </div>
+
+    <div class="hero-img">
+        <img src="images/srcc.jpg" alt="Sania">
+    </div>
+
+</section>
+
+<footer id="contact">
+
+    <h3>Quick Links</h3>
+
+    <a href="index.html">Home</a>
+    <a href="htmlpractice.html">Practice Work</a>
+    <a href="../Project/index1.html">Project</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+
+    <div class="contact">
+        <h3>Contact</h3>
+        <p>Email: sharmasania094@gmail.com</p>
+        <p>Location: New Delhi, India</p>
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Sania Portfolio | All Rights Reserved
+    </div>
+
+</footer>
+
+</body>
+</html>

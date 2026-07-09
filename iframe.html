@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iframe Practice</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#F1E2D1;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+    padding:20px;
+}
+
+/* Header */
+
+header{
+    background:#541A1A;
+    color:#F1E2D1;
+    padding:22px 30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    margin-bottom:35px;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+
+.header-back{
+    position:absolute;
+    left:25px;
+    text-decoration:none;
+    background:#F1E2D1;
+    color:#541A1A;
+    border:2px solid #F1E2D1;
+    padding:8px 18px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.header-back:hover{
+    background:#F1E2D1;
+    color:#541A1A;
+}
+
+header span{
+    font-size:34px;
+    font-weight:bold;
+}
+
+/* Main */
+
+.container{
+    flex:1;
+    width:95%;
+    max-width:1100px;
+    margin:auto;
+}
+
+h2{
+    margin:30px 0 15px;
+    font-size:26px;
+    color:#541A1A;
+}
+
+.background,
+.card{
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+    margin-bottom:30px;
+    transition:.3s;
+}
+
+.background:hover,
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+iframe{
+    width:100%;
+    height:450px;
+    border:none;
+    border-radius:8px;
+    background:#fafafa;
+}
+
+/* Footer */
+
+footer{
+    background:#541A1A;
+    color:#F1E2D1;
+    text-align:center;
+    padding:22px;
+    border-radius:12px;
+    margin-top:40px;
+}
+
+footer p{
+    margin:5px 0;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+body{
+    padding:10px;
+}
+
+header{
+    justify-content:flex-start;
+    gap:15px;
+    padding:18px;
+}
+
+.header-back{
+    position:static;
+    padding:6px 14px;
+    font-size:14px;
+}
+
+header span{
+    font-size:24px;
+}
+
+h2{
+    font-size:20px;
+}
+
+.background,
+.card{
+    padding:12px;
+}
+
+iframe{
+    height:280px;
+}
+
+footer{
+    padding:18px;
+    font-size:14px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<a href="htmlpractice.html" class="header-back">
+← Back
+</a>
+
+<span>IFRAME WORK</span>
+
+</header>
+
+<div class="container">
+
+<h2>Website</h2>
+
+<div class="background">
+<iframe scrolling="no" src="index.html"></iframe>
+</div>
+
+<h2>Youtube Video</h2>
+
+<div class="card">
+<iframe src="https://www.youtube.com/embed/c5YdpZjW-dc?si=3gQK063TExEGU3KK" allowfullscreen></iframe>
+</div>
+
+<h2>Google Map</h2>
+
+<div class="card">
+<iframe src="https://maps.google.com/maps?q=delhi&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</div>
+
+</div>
+
+<footer>
+
+<p>© 2026</p>
+<p>| All Rights Reserved |</p>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Transform</title>
+
+
+
+<style>
+
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+}
+
+
+
+body{
+
+min-height:100vh;
+
+background:#f4f4f4;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+font-family:Arial;
+
+}
+
+
+
+.back-btn{
+    position:absolute;
+    left:20px;
+    top:50%;
+    transform:translateY(-50%);
+    width:45px;
+    height:45px;
+    background:#F1E2D1;
+    color:#541A1A;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:24px;
+    font-weight:bold;
+    border-radius:8px;
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#C2D099;
+    transform:translateY(-50%) scale(1.05);
+}
+
+
+
+
+
+
+/* Animation */
+
+
+@keyframes ani{
+
+
+from{
+
+
+transform:rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+
+
+}
+
+
+
+to{
+
+
+transform:rotateY(350deg) rotateX(34deg) rotateZ(230deg);
+
+
+}
+
+
+
+}
+
+header{
+    width:100%;
+    background:#541A1A;
+    color:#F1E2D1;
+    text-align:center;
+    padding:25px 20px;
+    position:relative;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+header h1{
+    font-size:34px;
+    font-family:"Arial Black",sans-serif;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+
+
+
+/* Container */
+
+
+#container{
+
+
+width:500px;
+
+
+
+height:500px;
+
+
+
+background:#F1E2D1;
+
+
+
+margin-top:40px;
+
+
+
+text-align:center;
+
+
+
+perspective:360px;
+
+
+
+border-radius:20px;
+
+
+
+box-shadow:0 10px 20px rgba(0,0,0,0.3);
+
+
+
+}
+
+
+
+
+
+
+/* 3D BOX */
+
+
+#p1{
+
+
+width:200px;
+
+
+
+height:200px;
+
+
+
+background:black;
+
+
+
+position:relative;
+
+
+
+top:120px;
+
+
+
+left:150px;
+
+
+
+animation:ani 5s linear infinite alternate;
+
+
+
+}
+
+
+
+
+
+/* Image */
+
+
+.pic{
+
+
+width:100%;
+
+
+
+height:100%;
+
+
+
+object-fit:cover;
+
+
+
+}
+
+
+
+
+
+
+/* Footer */
+
+
+footer{
+
+
+width:100%;
+
+
+
+margin-top:auto;
+
+
+
+padding:25px;
+
+
+
+background:#541A1A;
+
+
+
+color:#F1E2D1;
+
+
+
+text-align:center;
+
+
+
+box-shadow:0 -5px 15px rgba(0,0,0,0.3);
+
+
+
+font-size:18px;
+
+
+
+}
+
+
+
+
+
+
+/* Mobile */
+
+
+@media(max-width:600px){
+
+
+header{
+    padding:20px 15px;
+}
+
+header h1{
+    font-size:24px;
+}
+
+
+
+#container{
+
+
+width:90%;
+
+
+
+height:350px;
+
+
+
+}
+
+
+
+#p1{
+
+
+width:150px;
+
+
+
+height:150px;
+
+
+
+left:50%;
+
+
+
+transform:translateX(-50%);
+
+
+
+top:100px;
+
+
+
+}
+
+
+
+.back-btn{
+    left:10px;
+    width:40px;
+    height:40px;
+    font-size:20px;
+}
+
+
+}
+
+
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+<header>
+ <a href="htmlpractice.html" class="back-btn">←</a>
+<h1>3D Animation</h1>
+
+</header>
+
+<div id="container">
+
+<div id="p1">
+
+
+<img src="images/a2.jpg" class="pic">
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<footer>
+
+
+© 2026 | All Rights Reserved |
+
+
+</footer>
+
+
+
+
+
+</body>
+
+
+</html>
