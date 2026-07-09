@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Div Creation</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#FFF0E4;
+    color:#333;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+
+
+header{
+    background:#541A1A;
+    color:#F1E2D1;
+    text-align:center;
+    padding:20px;
+    font-size:30px;
+    letter-spacing:2px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    position:relative;
+}
+
+.back-btn{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    background:#F1E2D1;
+    color:#541A1A;
+    padding:8px 14px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.back-btn:hover{
+    transform:translateY(-50%) scale(1.05);
+}
+
+
+
+.box{
+    border-radius:10px;
+    transition:0.5s;
+    width:300px;
+    border:2px black solid;
+    text-align:center;
+    background:#541A1A;
+    color:#F1E2D1;
+    box-shadow:0px 0px 10px #494c4c;
+    margin:40px auto;
+    padding-bottom:20px;
+}
+
+
+
+.buttons{
+    position:fixed;
+    bottom:60px;
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+
+.button{
+    background:#541A1A;
+    color:#F1E2D1;
+    padding:12px 30px;
+    border-radius:8px;
+    text-decoration:none;
+    box-shadow:0px 0px 10px #414545;
+    transition:0.5s;
+}
+
+.button:hover{
+    transform:scale(1.05);
+}
+
+
+footer{
+    width:100%;
+    background:#541A1A;
+    color:#F1E2D1;
+    text-align:center;
+    padding:10px;
+    margin-top:auto;
+}
+
+@media (max-width: 600px){
+
+    header{
+        font-size:20px;
+        padding:15px;
+    }
+
+    .back-btn{
+        left:10px;
+        padding:6px 10px;
+        font-size:12px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <a href="../html/htmlpractice.html" class="back-btn">←</a>
+
+    Create Div Element By JavaScript
+
+</header>
+
+
+
+<script>
+
+document.title="Create Element"
+
+var d = document.createElement("div");
+document.body.appendChild(d);
+d.className="box mystyle";
+
+d.innerHTML="<button style='margin-top:10px;margin-left:240px;' onclick='closedilog()'>X</button>";
+d.innerHTML+="<h2 style='color:#FFE0C5;'>GIF</h2>";
+d.innerHTML+="<hr color='black' size='3'>";
+d.innerHTML+="<img src='images/g1.gif' style='width:300px;height:auto; margin:10px auto;display:block;'>";
+
+function closedilog(){
+    document.body.removeChild(d);
+}
+
+</script>
+
+<footer> © 2026 All Rights Reserved</footer>
+
+</body>
+</html>

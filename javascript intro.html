@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#541A1A;
+    color:#F1E2D1;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+
+
+header{
+    width:100%;
+    background:#541A1A;
+    color:#F1E2D1;
+    text-align:center;
+    padding:25px;
+    font-size:32px;
+    letter-spacing:2px;
+    position:relative;
+    box-shadow:0 10px 25px rgba(255,255,255,0.15);
+}
+
+
+.back-btn{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    background:#F1E2D1;
+    color:#541A1A;
+    padding:10px 16px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.back-btn:hover{
+    transform:translateY(-50%) scale(1.05);
+}
+
+
+
+.button{
+    display:inline-block;
+    background:#541A1A;
+    color:#F1E2D1;
+    padding:10px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    margin-top:10px;
+    box-shadow:0 5px 15px rgba(255,255,255,0.15);
+    transition:0.5s;
+}
+
+.button:hover{
+    transform:scale(1.05);
+}
+
+
+
+.content-box{
+    width:90%;
+    max-width:900px;
+    min-height:400px;
+    background:white;
+    color:black;
+    margin:50px auto;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 10px 20px gray;
+    line-height:1.8;
+    font-size:18px;
+    text-align:justify;
+}
+
+footer{
+    width:100%;
+    margin-top:auto;
+    background:#541A1A;
+    color:#F1E2D1;
+    text-align:center;
+    padding:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+
+
+@media (max-width:600px){
+
+header{
+    font-size:20px;
+    padding:15px;
+}
+
+.back-btn{
+    left:10px;
+    padding:8px 12px;
+    font-size:14px;
+}
+
+.content-box{
+    font-size:16px;
+    padding:20px;
+}
+
+footer{
+    font-size:14px;
+    padding:10px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <a href="../html/htmlpractice.html" class="back-btn">←</a>
+    Welcome to JavaScript
+</header>
+
+<script>
+
+var mycolor = prompt("Set background color","pink");
+document.body.style.background = mycolor;
+
+document.write(`
+<div class="content-box">
+
+<h1 style="text-align:center;color:#541A1A;margin-bottom:20px;">
+Introduction
+</h1>
+
+<p>
+JavaScript is a programming language that was first created in 1994 as a way to add functionality and user interaction to a website.
+If we think back to our analogy of a web page as a house, we will remember that we said that JavaScript is the electricity,
+plumbing, and gas. It is what makes the web page run.
+</p>
+
+</div>
+`);
+
+</script>
+
+
+
+<footer>
+    © 2026 | All Rights Reserved |
+</footer>
+
+</body>
+</html>

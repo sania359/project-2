@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing Canvas</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #DCC3AA;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        header {
+            width: 100%;
+            background: #541A1A;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #DCC3AA;
+        }
+
+  
+        .info {
+            margin: 20px;
+            background: #541A1A;
+            padding: 15px 30px;
+            border-radius: 30px;
+            color: #DCC3AA;
+            font-weight: bold;
+        }
+
+  
+        .canvas-box {
+            background: white;
+            padding: 20px;
+            border-radius: 25px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, .3);
+        }
+
+        canvas {
+            border-radius: 20px;
+            border: 5px solid #541A1A;
+            cursor: crosshair;
+        }
+
+
+        .btn-area {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+
+        button,
+        .back-btn {
+            padding: 12px 35px;
+            border: none;
+            border-radius: 30px;
+            background: #541A1A;
+            color: #DCC3AA;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        button:hover,
+        .back-btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            margin-top: 30px;
+            width: 100%;
+            background: #541A1A;
+            color: #DCC3AA;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🎨 JavaScript Drawing Canvas</h1>
+    </header>
+
+    <div class="info">
+        Move Mouse = Draw | R = Increase Size | T = Decrease Size | Space = Clear
+    </div>
+
+    <div class="canvas-box">
+
+        <canvas id="mycan" width="600" height="600"></canvas>
+
+
+        <div class="btn-area">
+
+            <button onclick="clearCanvas()">Clear Drawing</button>
+
+            <a href="../html/htmlpractice.html" class="back-btn">Back</a>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        var c = document.getElementById("mycan");
+        var d = c.getContext("2d");
+
+        var r = 10;
+
+        var red, green, blue, drawcolor;
+
+        function f1(event) {
+
+            var k = event.key;
+
+            switch (k) {
+
+                case "r":
+                    if (r < 100) {
+                        r++;
+                    }
+                    break;
+
+                case "t":
+                    if (r > 10) {
+                        r--;
+                    }
+                    break;
+
+                case " ":
+                    clearCanvas();
+                    break;
+
+            }
+
+        }
+
+        function draw(event) {
+
+            var x = event.offsetX;
+            var y = event.offsetY;
+
+            red = Math.round(Math.random() * 255);
+            green = Math.round(Math.random() * 255);
+            blue = Math.round(Math.random() * 255);
+
+            drawcolor = "rgb(" + red + "," + green + "," + blue + ")";
+
+            d.beginPath();
+            d.arc(x, y, r, 0, 2 * Math.PI);
+            d.fillStyle = drawcolor;
+            d.fill();
+            d.stroke();
+
+        }
+
+        function clearCanvas() {
+            d.clearRect(0, 0, c.width, c.height);
+        }
+
+        document.addEventListener("keydown", f1);
+        c.addEventListener("mousemove", draw);
+
+    </script>
+
+    <footer>
+        © 2026 Sania Portfolio
+    </footer>
+
+</body>
+
+</html>
