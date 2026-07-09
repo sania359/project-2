@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Circle Generator</title>
+</head>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+body
+{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+header
+{
+    width:100%;
+    background:#541A1A;
+    padding:20px;
+    text-align:center;
+    color: #DCC3AA;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.back-btn
+{
+    position:absolute;
+    left:20px;
+    text-decoration:none;
+    background:#DCC3AA;
+    color:#541A1A;
+    padding:10px 18px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;   
+}
+
+.back-btn:hover{
+    background:#ffffff;
+    transform:translateX(-3px);
+}
+
+
+canvas{
+    background:black;
+    flex:1;
+    display:block;
+}
+
+footer{
+    width:100%;
+    background:#541A1A;
+    color:#DCC3AA;
+    text-align:center;
+    padding:15px;
+    font-size:16px;
+}
+
+@media (max-width:768px){
+
+    header{
+        padding:15px;
+    }
+
+    header h1{
+        font-size:24px;
+        padding:0 60px;
+    }
+
+    .back-btn{
+        width:40px;
+        height:40px;
+        font-size:20px;
+        left:12px;
+    }
+
+    footer{
+        font-size:14px;
+        padding:12px;
+    }
+
+}
+
+
+@media (max-width:480px)
+{
+
+    header h1{
+        font-size:18px;
+        padding:0 50px;
+    }
+
+    .back-btn{
+        width:35px;
+        height:35px;
+        font-size:18px;
+        left:10px;
+    }
+
+    footer{
+        font-size:13px;
+    }
+
+}
+</style>
+
+<body>
+<header>
+    <h1>RANDOM CIRCLES GENERATER</h1>
+        <a href="../html/htmlpractice.html" class="back-btn">←</a>
+</header>
+    <canvas id="mycan" style="background:black" width="600" height="600"></canvas>
+    <script>
+        var c = document.getElementById("mycan");
+        var k;
+        var r = 10
+        var d = c.getContext("2d");
+        c.width = window.innerWidth;
+        c.height = window.innerHeight;
+        var red , green ,blue,drawcolor
+        var drawcolor = false
+        drawcolor ="red"
+        function pixel()
+        {
+            var x = Math.round(Math.random()*window.innerWidth)
+            var y = Math.round(Math.random()*window.innerHeight)
+            
+            red = Math.round(Math.random()*255)
+            green = Math.round(Math.random()*255)
+            blue = Math.round(Math.random()*255)
+            drawcolor ="rgb("+red+","+green+","+blue+")"
+            d.beginPath();
+            d.arc(x,y,Math.random()*27,0,3 * Math.PI);
+            d.fillStyle = drawcolor
+            d.fill()
+            document.title = x
+        }
+        setInterval("pixel()",10)
+
+
+    </script>
+<footer>
+    © 2026 All Rights Reserved
+</footer>
+</body>
+</html>

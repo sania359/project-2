@@ -1,192 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drawing Canvas</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drawing Canvas</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+<style>
 
-        body {
-            min-height: 100vh;
-            background: #DCC3AA;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
-
-        header {
-            width: 100%;
-            background: #541A1A;
-            padding: 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            color: #DCC3AA;
-        }
-
-  
-        .info {
-            margin: 20px;
-            background: #541A1A;
-            padding: 15px 30px;
-            border-radius: 30px;
-            color: #DCC3AA;
-            font-weight: bold;
-        }
-
-  
-        .canvas-box {
-            background: white;
-            padding: 20px;
-            border-radius: 25px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, .3);
-        }
-
-        canvas {
-            border-radius: 20px;
-            border: 5px solid #541A1A;
-            cursor: crosshair;
-        }
+body{
+    min-height:100vh;
+    background:#DCC3AA;
+    display:flex;
+    flex-direction:column;
+}
 
 
-        .btn-area {
-            margin-top: 20px;
-            display: flex;
-            gap: 15px;
-        }
+
+header{
+    width:100%;
+    background:#541A1A;
+    color:#DCC3AA;
+    text-align:center;
+    padding:18px;
+}
+
+header h1{
+    font-size:32px;
+}
 
 
-        button,
-        .back-btn {
-            padding: 12px 35px;
-            border: none;
-            border-radius: 30px;
-            background: #541A1A;
-            color: #DCC3AA;
-            font-size: 16px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-        }
 
-        button:hover,
-        .back-btn:hover {
-            opacity: 0.9;
-        }
+.info{
+    width:90%;
+    max-width:700px;
+    margin:20px auto;
+    background:#541A1A;
+    color:#DCC3AA;
+    padding:12px 18px;
+    text-align:center;
+    border-radius:8px;
+    font-size:16px;
+}
 
-        footer {
-            margin-top: 30px;
-            width: 100%;
-            background: #541A1A;
-            color: #DCC3AA;
-            text-align: center;
-            padding: 15px;
-        }
-    </style>
+.canvas-box{
+    width:95%;
+    max-width:900px;   
+    background:#fff;
+    margin:20px auto;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+}
+
+
+
+canvas{
+    width:100%;
+    height:600px;    
+    border:4px solid #541A1A;
+    border-radius:8px;
+    display:block;
+    cursor:crosshair;
+}
+
+
+
+.btn-area{
+    margin-top:15px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+button,
+.back-btn{
+    padding:10px 25px;
+    border:none;
+    border-radius:6px;
+    background:#541A1A;
+    color:#DCC3AA;
+    font-size:16px;
+    cursor:pointer;
+    text-decoration:none;
+    transition:.3s;
+}
+
+button:hover,
+.back-btn:hover{
+    background:#6d2323;
+}
+
+
+footer{
+    width:100%;
+    background:#541A1A;
+    color:#DCC3AA;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
+
+
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:24px;
+    }
+
+    .info{
+        font-size:14px;
+    }
+
+    .canvas-box{
+        width:95%;
+    }
+
+    button,
+    .back-btn{
+        width:100%;
+        max-width:220px;
+    }
+
+}
+
+
+
+@media(max-width:768px){
+
+    .canvas-box{
+        width:95%;
+        padding:15px;
+    }
+
+    canvas{
+        height:450px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    canvas{
+        height:350px;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
 
-    <header>
-        <h1>🎨 JavaScript Drawing Canvas</h1>
-    </header>
+<header>
+    <h1>🎨 JavaScript Drawing Canvas</h1>
+</header>
 
-    <div class="info">
-        Move Mouse = Draw | R = Increase Size | T = Decrease Size | Space = Clear
-    </div>
+<div class="info">
+    Move Mouse = Draw | R = Increase Size | T = Decrease Size | Space = Clear
+</div>
 
-    <div class="canvas-box">
+<div class="canvas-box">
 
-        <canvas id="mycan" width="600" height="600"></canvas>
+    <canvas id="mycan" width="600" height="600"></canvas>
 
+    <div class="btn-area">
 
-        <div class="btn-area">
+        <button onclick="clearCanvas()">Clear Drawing</button>
 
-            <button onclick="clearCanvas()">Clear Drawing</button>
-
-            <a href="../html/htmlpractice.html" class="back-btn">Back</a>
-
-        </div>
+        <a href="../html/htmlpractice.html" class="back-btn">Back</a>
 
     </div>
 
-    <script>
+</div>
 
-        var c = document.getElementById("mycan");
-        var d = c.getContext("2d");
+<footer>
+    © 2026 Sania Portfolio
+</footer>
 
-        var r = 10;
+<script>
 
-        var red, green, blue, drawcolor;
+var c = document.getElementById("mycan");
+var d = c.getContext("2d");
 
-        function f1(event) {
+var r = 10;
 
-            var k = event.key;
+var red, green, blue, drawcolor;
 
-            switch (k) {
+function f1(event){
 
-                case "r":
-                    if (r < 100) {
-                        r++;
-                    }
-                    break;
+    var k = event.key;
 
-                case "t":
-                    if (r > 10) {
-                        r--;
-                    }
-                    break;
+    switch(k){
 
-                case " ":
-                    clearCanvas();
-                    break;
-
+        case "r":
+            if(r < 100){
+                r++;
             }
+            break;
 
-        }
+        case "t":
+            if(r > 10){
+                r--;
+            }
+            break;
 
-        function draw(event) {
+        case " ":
+            clearCanvas();
+            break;
 
-            var x = event.offsetX;
-            var y = event.offsetY;
+    }
 
-            red = Math.round(Math.random() * 255);
-            green = Math.round(Math.random() * 255);
-            blue = Math.round(Math.random() * 255);
+}
 
-            drawcolor = "rgb(" + red + "," + green + "," + blue + ")";
+function draw(event){
 
-            d.beginPath();
-            d.arc(x, y, r, 0, 2 * Math.PI);
-            d.fillStyle = drawcolor;
-            d.fill();
-            d.stroke();
+    var x = event.offsetX;
+    var y = event.offsetY;
 
-        }
+    red = Math.round(Math.random()*255);
+    green = Math.round(Math.random()*255);
+    blue = Math.round(Math.random()*255);
 
-        function clearCanvas() {
-            d.clearRect(0, 0, c.width, c.height);
-        }
+    drawcolor = "rgb(" + red + "," + green + "," + blue + ")";
 
-        document.addEventListener("keydown", f1);
-        c.addEventListener("mousemove", draw);
+    d.beginPath();
+    d.arc(x, y, r, 0, 2*Math.PI);
+    d.fillStyle = drawcolor;
+    d.fill();
+    d.stroke();
 
-    </script>
+}
 
-    <footer>
-        © 2026 Sania Portfolio
-    </footer>
+function clearCanvas(){
+
+    d.clearRect(0,0,c.width,c.height);
+
+}
+
+document.addEventListener("keydown",f1);
+
+c.addEventListener("mousemove",draw);
+
+</script>
 
 </body>
-
 </html>
