@@ -186,32 +186,39 @@ nav a:hover{
 
 .back-home{
     text-align:center;
-    margin:50px 0;
+    margin:50px 0 20px;
 }
 
 .back-home a{
-    background:#541A1A;
-    color:white;
-    padding:14px 40px;
-    border-radius:30px;
+    display:inline-block;
+    padding:12px 30px;
+    background:#810B38;
+    color:#fff;
     text-decoration:none;
+    border-radius:30px;
+    font-size:18px;
+    font-weight:600;
     transition:.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
 }
 
 .back-home a:hover{
-    background:#810B38;
+    background:#5E0828;
+    transform:translateY(-3px);
 }
-
 
 
 footer{
-    margin-top:auto;
-    background:#DCC3AA;
-    color:#810B38;
+    width:100%;
+    margin:20px auto;
+  background:#5E0828;
+    color:white;
     text-align:center;
-    padding:25px;
-}
-
+    padding:20px;
+    font-size:20px;
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+} 
 @media(max-width:1000px){
 
 .container{
@@ -549,6 +556,34 @@ nav a:last-child{
 
 </div>
 
+
+<div class="section-title">
+    <h2>JQuery Practice</h2>
+</div>
+
+<div class="container">
+
+<div class="card">
+<h3>1.JQuery Introduction</h3>
+<p>Introduction to the basic jQuery functions and methods with simple examples.</p>
+<a href="intro.html" class="project-btn">View Project</a>
+</div>
+
+
+<div class="card">
+<h3>2. Event function</h3>
+<p>Learn the basic functions of jQuery, including ready(), hide(), show(), toggle()</p>
+<a href="function.html" class="project-btn">View Project</a>
+</div>
+
+<div class="card">
+<h3>3.Pull Down Menu</h3>
+<p>An interactive accordion menu built with HTML, CSS, and jQuery featuring smooth slide animations.</p>
+<a href="down_menu.html" class="project-btn">View Project</a>
+</div>
+
+
+</div>
 <div class="back-home">
 <a href="index.html">Back</a>
 </div>

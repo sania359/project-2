@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Introduction</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, sans-serif;
+            background:#F1E2D1;
+            display:flex;
+            flex-direction:column;
+            min-height:100vh;
+        }
+
+        /* Header */
+
+        header{
+            width:100%;
+            background:#541A1A;
+            color:#F1E2D1;
+            text-align:center;
+            padding:20px;
+            font-size:32px;
+            font-family:Arial Black;
+            text-transform:uppercase;
+            letter-spacing:2px;
+            box-shadow:0 5px 10px rgba(0,0,0,0.2);
+        }
+
+        /* Main */
+
+        main{
+            flex:1;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:40px 20px;
+        }
+
+        /* Content Box */
+
+        .box{
+            width:700px;
+            max-width:100%;
+            background:#fff;
+            border-radius:12px;
+            padding:30px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .box h2{
+            color:#b5451c;
+            margin-bottom:20px;
+            text-decoration:underline;
+        }
+
+        .box p{
+            color:#333;
+            font-size:18px;
+            line-height:1.8;
+            text-align:justify;
+            margin-bottom:20px;
+        }
+
+        .highlight{
+            color:rgb(122, 28, 28);
+            font-weight:bold;
+        }
+
+        h3{
+            color:#b5451c;
+            margin-bottom:15px;
+        }
+
+        ul{
+            margin-left:25px;
+        }
+
+        ul li{
+            font-size:17px;
+            margin-bottom:12px;
+            color:#444;
+        }
+
+        /* Footer */
+
+        footer{
+            background:#541A1A;
+            color:#F1E2D1;
+            text-align:center;
+            padding:18px;
+            font-size:18px;
+            box-shadow:0 -3px 10px rgba(0,0,0,0.2);
+        }
+
+        /* Responsive */
+
+        @media(max-width:768px){
+
+            header{
+                font-size:24px;
+            }
+
+            .box{
+                padding:20px;
+            }
+
+            .box h2{
+                font-size:24px;
+            }
+
+            .box p{
+                font-size:16px;
+            }
+
+            ul li{
+                font-size:16px;
+            }
+
+            footer{
+                font-size:16px;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <header>
+       jQuery Introduction
+    </header>
+
+    <main>
+
+        <div class="box">
+
+            <h2>jQuery Introduction</h2>
+
+            <p>
+                <span class="highlight">jQuery</span> is a fast, lightweight, and powerful JavaScript library that makes JavaScript programming easier and faster. It allows developers to write less code while performing complex tasks. jQuery simplifies HTML document manipulation, CSS styling, event handling, animations, and AJAX functionality. It works smoothly across all major web browsers, making web development easier and more efficient. Because of its simplicity and flexibility, jQuery has become one of the most popular JavaScript libraries used by developers around the world. It follows the principle <strong>"Write Less, Do More."</strong>
+            </p>
+
+            <h3>Features of jQuery</h3>
+
+            <ul>
+                <li>HTML / DOM Manipulation</li>
+                <li>CSS Manipulation</li>
+                <li>HTML Event Handling</li>
+                <li>Effects and Animations</li>
+                <li>AJAX Support</li>
+                <li>Cross-Browser Compatibility</li>
+                <li>Easy to Learn and Use</li>
+            </ul>
+
+        </div>
+
+    </main>
+
+    <footer>
+         © 2026 | All Rights Reserved |
+    </footer>
+
+</body>
+</html>

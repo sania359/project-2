@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery Function</title>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#F1E2D1;
+}
+
+/* Header */
+
+header{
+    width:60%;
+    margin:20px auto;
+    padding:18px;
+    text-align:center;
+    font-size:30px;
+    font-family:Arial Black;
+    text-transform:uppercase;
+    background:#541A1A;
+    color:#F1E2D1;
+    border-radius:10px;
+    box-shadow:0px 6px 15px rgba(0,0,0,.3);
+}
+
+/* Image */
+
+img{
+    width:400px;
+    height:380px;
+    display:block;
+    margin:30px auto;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.5s;
+    box-shadow:0px 5px 15px rgba(0,0,0,.3);
+}
+
+img:hover{
+    transform:scale(1.03);
+}
+
+/* Button */
+
+#b1{
+    display:block;
+    margin:20px auto;
+    padding:12px 25px;
+    font-size:20px;
+    background:#541A1A;
+    color:#F1E2D1;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    transition:.4s;
+}
+
+#b1:hover{
+    background:#7A2626;
+}
+
+/* Heading */
+
+#my{
+    width:300px;
+    margin:20px auto;
+    text-align:center;
+    background:#541A1A;
+    color:#F1E2D1;
+    padding:10px;
+    border-radius:6px;
+    font-size:28px;
+}
+
+h2{
+    text-align:center;
+    margin-top:15px;
+    font-size:30px;
+    color:#541A1A;
+    text-decoration:underline;
+}
+
+/* Paragraph */
+
+.text{
+    width:85%;
+    margin:30px auto;
+    padding:25px;
+    background:#541A1A;
+    color:#F1E2D1;
+    border-radius:10px;
+    font-size:20px;
+    line-height:35px;
+    text-align:justify;
+    transition:.5s;
+}
+
+/* Footer */
+
+footer{
+    margin-top:40px;
+    background:#541A1A;
+    color:#F1E2D1;
+    text-align:center;
+    padding:20px;
+    font-size:18px;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+Selector Event Function in jQuery
+</header>
+
+<img src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=800" alt="Earth">
+
+<button id="b1">Hide Heading</button>
+
+<h1 id="my">About Our Planet</h1>
+
+<h2>Earth</h2>
+
+<p class="text">
+Earth is the third planet from the Sun and the only known planet that supports life. About 71% of Earth's surface is covered with water, while the remaining 29% consists of land. It has a protective atmosphere rich in oxygen, making life possible. Earth rotates once every 24 hours, creating day and night, and revolves around the Sun in about 365 days. It is home to millions of living species and diverse ecosystems including forests, deserts, mountains, rivers, and oceans. Conserving nature, reducing pollution, and protecting natural resources are essential to keeping our planet healthy for future generations.
+</p>
+
+<footer>
+© 2026 My Work | All Rights Reserved
+</footer>
+
+<script>
+
+$(document).ready(function(){
+
+    $("#b1").click(function(){
+
+        $("#my").toggle("fast");
+
+    });
+
+    $(".text").mouseover(function(){
+
+        $(this).css({
+
+            "background":"#F1E2D1",
+            "color":"#541A1A",
+            "transition":"0.6s"
+
+        });
+
+    });
+
+    $(".text").mouseout(function(){
+
+        $(this).css({
+
+            "background":"#541A1A",
+            "color":"#F1E2D1",
+            "transition":"0.6s"
+
+        });
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
