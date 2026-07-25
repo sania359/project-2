@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore India Accordion</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    background-attachment:fixed;
+    padding:20px;
+}
+
+.container{
+    width:80%;
+    margin:auto;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0px 10px 30px rgba(0,0,0,.4);
+}
+
+h1{
+    text-align:center;
+    padding:25px;
+    background:#14213d;
+    color:#FFD60A;
+    font-size:40px;
+    letter-spacing:2px;
+}
+
+.subtitle{
+    text-align:center;
+    padding:15px 25px;
+    font-size:18px;
+    color:#555;
+    background:#f8f8f8;
+}
+
+.box{
+    margin:18px;
+}
+
+.head{
+    background:#003049;
+    color:white;
+    padding:18px;
+    font-size:24px;
+    cursor:pointer;
+    border-radius:10px;
+    margin-bottom:6px;
+    transition:.4s;
+}
+
+.head:hover{
+   background:#2563EB;
+}
+
+.content{
+    display:none;
+    padding:25px;
+    font-size:18px;
+    line-height:32px;
+    border-radius:0 0 10px 10px;
+}
+
+.content p{
+    text-align:justify;
+    margin-bottom:20px;
+}
+
+img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-top:15px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.container{
+    width:95%;
+}
+
+h1{
+    font-size:28px;
+}
+
+.subtitle{
+    font-size:16px;
+}
+
+.head{
+    font-size:20px;
+    padding:15px;
+}
+
+.content{
+    font-size:16px;
+    line-height:28px;
+}
+
+img{
+    height:250px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1> Explore Incredible India</h1>
+
+
+<!-- Kashmir -->
+
+<div class="box">
+<div class="head" id="col1">
+🏔 Kashmir
+</div>
+<div class="content" id="kashmirsub">
+<p>
+Kashmir is popularly known as <b>"Paradise on Earth."</b>
+It is famous for its snow-covered mountains, beautiful valleys,
+Dal Lake, colorful gardens and traditional Shikara boats.
+Millions of tourists visit Kashmir every year to experience
+its breathtaking natural beauty and peaceful environment.
+</p>
+<img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=1200" alt="Kashmir">
+</div>
+</div>
+
+<!-- Jaipur -->
+
+<div class="box">
+<div class="head" id="col2">
+🏰 Jaipur
+</div>
+<div class="content" id="jaipursub">
+<p>
+Jaipur, the capital of Rajasthan, is known as the
+<b>Pink City.</b> It is famous for Hawa Mahal,
+Amber Fort, City Palace and colorful local markets.
+Jaipur reflects India's royal history and attracts
+visitors from around the world.
+</p>
+<img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1200&q=80" alt="Jaipur">
+</div>
+</div>
+
+<!-- Goa -->
+
+<div class="box">
+<div class="head" id="col3">
+🌴 Goa
+</div>
+<div class="content" id="goasub">
+<p>
+Goa is one of India's most popular holiday destinations.
+It is famous for its golden beaches, water sports,
+Portuguese architecture, delicious seafood and vibrant nightlife.
+Goa offers the perfect blend of relaxation and adventure.
+</p>
+<img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=1200" alt="Goa">
+</div>
+</div>
+
+<!-- Kerala -->
+
+<div class="box">
+<div class="head" id="col4">
+🌿 Kerala
+</div>
+<div class="content" id="keralasub">
+<p>
+Kerala is called <b>"God's Own Country."</b>
+It is famous for its peaceful backwaters, lush green forests,
+tea plantations, houseboats, wildlife and beautiful beaches.
+Kerala is one of the most relaxing and scenic tourist destinations in India.
+</p>
+<img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1200&q=80" alt="Kerala">
+</div>
+</div>
+</div>
+
+
+
+<script>
+
+$("#kashmirsub").hide();
+$("#jaipursub").hide();
+$("#goasub").hide();
+$("#keralasub").hide();
+
+$(document).ready(function(){
+
+    $("#col1").click(function(){
+
+        $("#jaipursub").slideUp(500);
+        $("#goasub").slideUp(500);
+        $("#keralasub").slideUp(500);
+
+        $("#kashmirsub").slideToggle(500);
+
+        $("#kashmirsub").css({
+            "background":"#0B8457",
+            "color":"white",
+            "width":"100%"
+        });
+
+    });
+
+    $("#col2").click(function(){
+
+        $("#kashmirsub").slideUp(500);
+        $("#goasub").slideUp(500);
+        $("#keralasub").slideUp(500);
+
+        $("#jaipursub").slideToggle(500);
+
+        $("#jaipursub").css({
+            "background":"#8B4513",
+            "color":"white",
+            "width":"100%"
+        });
+
+    });
+
+    $("#col3").click(function(){
+
+        $("#kashmirsub").slideUp(500);
+        $("#jaipursub").slideUp(500);
+        $("#keralasub").slideUp(500);
+
+        $("#goasub").slideToggle(500);
+
+        $("#goasub").css({
+            "background":"#0077B6",
+            "color":"white",
+            "width":"100%"
+        });
+
+    });
+
+    $("#col4").click(function(){
+
+        $("#kashmirsub").slideUp(500);
+        $("#jaipursub").slideUp(500);
+        $("#goasub").slideUp(500);
+
+        $("#keralasub").slideToggle(500);
+
+        $("#keralasub").css({
+            "background":"#2D6A4F",
+            "color":"white",
+            "width":"100%"
+        });
+
+    });
+
+});
+
+</script>
+</body>
+</html>
