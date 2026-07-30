@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Fade Functions</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+</head>
+<style>
+*{
+   margin:0;
+   padding:0;
+   box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+   background:#eef3f8;
+   text-align:center;
+    min-height:100vh;
+}
+
+header{
+    width:100%;
+    background:linear-gradient(135deg,#0f172a,#1e40af);
+    color:white;
+    text-align:center;
+    font-size:38px;
+    font-weight:bold;
+    padding:25px;
+    margin-bottom:40px;
+    box-shadow:0 5px 15px grba(0,0,0,.25);
+}
+
+#pic{
+    width:450px;
+    max-width:90%;
+    height:350px;
+    object-fit:cover;
+    border-radius:15px;
+    border:5px solid white;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+    display:block;
+    margin:0 auto 30px;
+}
+
+footer{
+    width:100%;
+    background:linear-gradient(135deg,#0f172a,#1e40af);
+    color:white;
+    text-align:center;
+    font-size:18px;
+    font-weight:600;
+    padding:18px;
+    margin-top:40px;
+    box-shadow:0 -5px 15px rgba(0,0,0,.20);
+}
+
+button{
+    padding:14px 30px;
+    margin:10px;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transition:translateY(-5px);
+}
+
+#inbtn{
+     background:#22c55e;
+}
+
+#inbtn:hover{
+    background:#16a34a;
+}
+
+#outbtn{
+    background:#ef4444;
+}
+
+#outbtn:hover{
+    background:#dc2626;
+}
+
+#tobtn{
+    background:#2563eb;
+}
+
+#tobtn:hover{
+    background:#1d4ed8;
+}
+
+@media(max-width:768px){
+
+header{
+    font-size:28px;
+    padding:18px;
+}
+
+#pic{
+    width:90%;
+    height:250px;
+}
+
+button{
+    width:90%;
+    display:block;
+    margin:15px auto;
+}
+
+footer{
+    font-size:16px;
+    padding:15px;
+}
+}
+</style>
+<body>
+  <header>JQuery Fade Function</header>
+    <img id="pic"
+     src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?w=1200"
+     alt="Cat"></br>
+     <button id="inbtn">Fade In</button>
+     <button id="outbtn">Fade Out</button>
+     <button id="tobtn">Fade to 50%</button>
+  </div> 
+
+<script>
+$(document).ready(function(){
+
+    $("#inbtn").click(function(){
+        $("#pic").fadeIn(1000).css("opacity","1");
+    });
+
+    $("#outbtn").click(function(){
+        $("#pic").fadeOut(1000);
+    });
+
+    $("#tobtn").click(function(){
+        $("#pic").fadeTo(1000,0.5);
+    });
+
+});
+</script>
+<footer>
+     © 2026 | All Rights Reserved |
+</footer>
+</body>
+</html>
